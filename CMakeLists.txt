@@ -16,7 +16,7 @@ include(FeatureSummary)
 find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Core Gui Widgets X11Extras)
 find_package(Wayland)
 find_package(epoxy REQUIRED)
-set(KF5_MIN_VERSION "5.9.0")
+set(KF5_MIN_VERSION "5.30.0")
 find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     I18n
     KDELibs4Support
