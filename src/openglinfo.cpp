@@ -6,8 +6,7 @@
 #include <QOpenGLContext>
 #include <QSurfaceFormat>
 #include <QOffscreenSurface>
-
-#include <wayland-version.h>
+#include <QX11Info>
 
 OpenGLInfo::OpenGLInfo()
 {
@@ -22,7 +21,7 @@ OpenGLInfo::OpenGLInfo()
   if (context.makeCurrent(&surface)) {
     KWin::GLPlatform *platform = KWin::GLPlatform::instance();
 
-    if (context.isOpenGLES()) {
+    if (context.isOpenGLES() || !QX11Info::isPlatformX11()) {
       platform->detect(KWin::EglPlatformInterface);
     } else {
       platform->detect(KWin::GlxPlatformInterface);
@@ -36,10 +35,11 @@ OpenGLInfo::OpenGLInfo()
     openGLVersion = QString::fromUtf8(platform->glVersionString());
     mesaVersion = KWin::GLPlatform::versionToString(platform->mesaVersion());
     if (platform->driver() == KWin::Driver::Driver_Unknown) {
-      kwinDriver = (char *) glGetString(GL_VENDOR);
+      kwinDriver = platform->glVendorString();
     } else {
       kwinDriver = KWin::GLPlatform::driverToString(platform->driver());
     }
+
     displayServerVersion = KWin::GLPlatform::versionToString(platform->serverVersion());
   }
   else {
@@ -47,7 +47,4 @@ OpenGLInfo::OpenGLInfo()
   }
 
   context.doneCurrent();
-
-  // FIXME: Make this a runtime thing
-  waylandVersion = WAYLAND_VERSION;
 }

@@ -1,6 +1,5 @@
 /*
   Copyright (C) 2012-2014 Harald Sitter <apachelogger@ubuntu.com>
-
   This program is free software; you can redistribute it and/or
   modify it under the terms of the GNU General Public License as
   published by the Free Software Foundation; either version 2 of
@@ -8,12 +7,10 @@
   accepted by the membership of KDE e.V. (or its successor approved
   by the membership of KDE e.V.), which shall act as a proxy
   defined in Section 14 of version 3 of the license.
-
   This program is distributed in the hope that it will be useful,
   but WITHOUT ANY WARRANTY; without even the implied warranty of
   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
   GNU General Public License for more details.
-
   You should have received a copy of the GNU General Public License
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
@@ -25,6 +22,7 @@
 #include <QIcon>
 #include <QStandardPaths>
 #include <QDebug>
+#include <QX11Info>
 
 #include <KAboutData>
 #include <KConfig>
@@ -99,6 +97,9 @@ Module::Module(QWidget *parent, const QVariantList &args) :
     font.setPixelSize(24);
     font.setBold(true);
     ui->nameVersionLabel->setFont(font);
+
+    // NOTE: Required for KWin to properly get the display server version
+    qApp->setProperty("x11Connection", QVariant::fromValue<void*>(QX11Info::connection()));
 
     ui->urlLabel->setTextInteractionFlags(Qt::TextSelectableByMouse | Qt::LinksAccessibleByMouse);
 
@@ -251,6 +252,8 @@ void Module::load()
     } else {
       ui->displayServerVersion->setHidden(true);
     }
+
+    networkStatus();
 
     connect(NetworkManager::notifier(), &NetworkManager::Notifier::connectivityChanged, this, &Module::networkStatus);
 }

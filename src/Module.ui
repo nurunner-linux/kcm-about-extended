@@ -32,37 +32,7 @@
        </rect>
       </property>
       <layout class="QGridLayout" name="gridLayout">
-       <item row="38" column="3">
-        <widget class="QLabel" name="mesa3D">
-         <property name="text">
-          <string>Mesa 3D:</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-         </property>
-        </widget>
-       </item>
-       <item row="46" column="3">
-        <widget class="QLabel" name="label_6">
-         <property name="text">
-          <string>Build Version:</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-         </property>
-        </widget>
-       </item>
-       <item row="32" column="3">
-        <widget class="QLabel" name="memory">
-         <property name="text">
-          <string>Memory:</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-         </property>
-        </widget>
-       </item>
-       <item row="46" column="4">
+       <item row="48" column="4">
         <widget class="QLabel" name="buildLabel">
          <property name="text">
           <string>{BuildVersion}</string>
@@ -89,7 +59,7 @@
          </property>
         </widget>
        </item>
-       <item row="49" column="4">
+       <item row="51" column="4">
         <spacer name="verticalSpacer_7">
          <property name="orientation">
           <enum>Qt::Vertical</enum>
@@ -142,17 +112,7 @@
          </property>
         </widget>
        </item>
-       <item row="39" column="3">
-        <widget class="QLabel" name="displayServerVersion">
-         <property name="text">
-          <string>Display Server:</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-         </property>
-        </widget>
-       </item>
-       <item row="49" column="5">
+       <item row="51" column="5">
         <spacer name="verticalSpacer_4">
          <property name="orientation">
           <enum>Qt::Vertical</enum>
@@ -172,7 +132,7 @@
          </property>
         </widget>
        </item>
-       <item row="44" column="3">
+       <item row="46" column="3">
         <widget class="QLabel" name="label_3">
          <property name="text">
           <string>OS Type:</string>
@@ -182,7 +142,7 @@
          </property>
         </widget>
        </item>
-       <item row="42" column="4">
+       <item row="44" column="4">
         <widget class="QLabel" name="networkLabel">
          <property name="text">
           <string>{OnlineStatus}</string>
@@ -206,7 +166,7 @@
          </property>
         </widget>
        </item>
-       <item row="49" column="3">
+       <item row="51" column="3">
         <spacer name="verticalSpacer">
          <property name="orientation">
           <enum>Qt::Vertical</enum>
@@ -229,7 +189,7 @@
          </property>
         </widget>
        </item>
-       <item row="43" column="4">
+       <item row="45" column="4">
         <widget class="QLabel" name="label_7">
          <property name="font">
           <font>
@@ -309,13 +269,6 @@
          </property>
         </widget>
        </item>
-       <item row="39" column="4">
-        <widget class="QLabel" name="displayServerVersionLabel">
-         <property name="text">
-          <string>{Display Server Version}</string>
-         </property>
-        </widget>
-       </item>
        <item row="34" column="4">
         <widget class="QLabel" name="label_4">
          <property name="font">
@@ -352,7 +305,7 @@
          </property>
         </spacer>
        </item>
-       <item row="41" column="4">
+       <item row="43" column="4">
         <widget class="QLabel" name="label_5">
          <property name="font">
           <font>
@@ -365,7 +318,7 @@
          </property>
         </widget>
        </item>
-       <item row="49" column="7">
+       <item row="51" column="7">
         <spacer name="verticalSpacer_8">
          <property name="orientation">
           <enum>Qt::Vertical</enum>
@@ -378,7 +331,7 @@
          </property>
         </spacer>
        </item>
-       <item row="41" column="7">
+       <item row="43" column="7">
         <widget class="QLabel" name="networkLogo">
          <property name="text">
           <string/>
@@ -547,7 +500,7 @@
          </property>
         </widget>
        </item>
-       <item row="44" column="4">
+       <item row="46" column="4">
         <widget class="QLabel" name="bitsLabel">
          <property name="text">
           <string notr="true">{QtArchitecutre}</string>
@@ -570,7 +523,7 @@
          </property>
         </widget>
        </item>
-       <item row="42" column="3">
+       <item row="44" column="3">
         <widget class="QLabel" name="network">
          <property name="text">
           <string>Network Status:</string>
@@ -580,7 +533,7 @@
          </property>
         </widget>
        </item>
-       <item row="45" column="3">
+       <item row="47" column="3">
         <widget class="QLabel" name="label_8">
          <property name="text">
           <string>OS Version:</string>
@@ -590,14 +543,14 @@
          </property>
         </widget>
        </item>
-       <item row="45" column="4">
+       <item row="47" column="4">
         <widget class="QLabel" name="namedReleaseLabel">
          <property name="text">
           <string>{OSVersion}</string>
          </property>
         </widget>
        </item>
-       <item row="38" column="4">
+       <item row="40" column="4">
         <widget class="QLabel" name="mesaVersionLabel">
          <property name="text">
           <string>{Mesa Version}</string>
@@ -618,6 +571,53 @@
         <widget class="QLabel" name="swapAmount">
          <property name="text">
           <string>{SwapAmount}</string>
+         </property>
+        </widget>
+       </item>
+       <item row="39" column="4">
+        <widget class="QLabel" name="displayServerVersionLabel">
+         <property name="text">
+          <string>{Display Server Version}</string>
+         </property>
+        </widget>
+       </item>
+       <item row="40" column="3">
+        <widget class="QLabel" name="mesa3D">
+         <property name="text">
+          <string>Mesa 3D:</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="48" column="3">
+        <widget class="QLabel" name="label_6">
+         <property name="text">
+          <string>Build Version:</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="32" column="3">
+        <widget class="QLabel" name="memory">
+         <property name="text">
+          <string>Memory:</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="39" column="3">
+        <widget class="QLabel" name="displayServerVersion">
+         <property name="text">
+          <string>Xorg-Server/Wayland :</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
          </property>
         </widget>
        </item>

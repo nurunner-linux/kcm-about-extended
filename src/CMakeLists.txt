@@ -22,6 +22,8 @@ target_link_libraries(kcm_about_extended
     KF5::KDELibs4Support
     KF5::NetworkManagerQt
     kwinglutils
+    xcb
+    Qt5::X11Extras
     GL
     ${epoxy_LIBRARY})
 
